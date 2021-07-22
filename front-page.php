@@ -22,13 +22,11 @@ Landing Page
         <?php endwhile;
                         endif; ?>
     </div>
-    <div class="row">projet</div>
-    <div class="row"></div>
 
 </div>
-
-
-
-
+<div class="row">
+    <h2></h2><?php include 'home.php'; ?></h2>
+</div>
 
 <?php include 'footer.php'; ?>
+</div>
