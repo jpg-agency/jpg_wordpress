@@ -25,7 +25,7 @@ Landing Page
 
 </div>
 <div class="row">
-    <h2></h2><?php include 'home.php'; ?></h2>
+    <h2><?php include 'home.php'; ?></h2>
 </div>
 
 <?php include 'footer.php'; ?>
