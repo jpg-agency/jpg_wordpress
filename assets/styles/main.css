@@ -9,3 +9,16 @@ Version: 1.0
 
 @import url("http://fonts.cdnfonts.com/css/din-pro-cond");
 /*Font*/
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-between;
+}
+
+.project {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
