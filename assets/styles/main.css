@@ -11,14 +11,16 @@ Version: 1.0
 /*Font*/
 
 #container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: space-between;
+  width: 94%;
+  margin-left: 5rem;
 }
 
-.project {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
+.titre_project {
+}
+
+.bloc_project {
+  width: 55%;
+}
+*/ .first_thumbnail {
+  margin-right: 0.5rem;
 }
