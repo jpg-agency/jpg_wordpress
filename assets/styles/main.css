@@ -11,16 +11,15 @@ Version: 1.0
 /*Font*/
 
 #container {
-  width: 94%;
+  width: 100vw; 
   margin-left: 5rem;
-}
 
-.titre_project {
-}
 
-.bloc_project {
-  width: 55%;
+ titre_project {
 }
-*/ .first_thumbnail {
+ 
+ .bloc_project {
+} 
+  .first_thumbnail {
   margin-right: 0.5rem;
-}
+} 
