@@ -1,32 +1,44 @@
-<?php include 'header.php'; ?>
+<?php get_header(); ?>
 
 
-Landing Page
-
-<div class="container_fluid">
-
-    <div class="row"><?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-                <h1><?php the_title(); ?></h1>
-
-
-
-        <?php endwhile;
-                        endif; ?>
-    </div>
-    <div class="row"><?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-                <p>
-                    <?php the_content(); ?>
-                </p>
-        <?php endwhile;
-                        endif; ?>
+    <div class="text">
+        <?php get_template_part ('parts/title' )?>
     </div>
 
-</div>
-<div class="row">
-    <h2><?php include 'home.php'; ?></h2>
+    <div>
+        <h2><?php /* get_template_part('home' ) */?></h2>
+
+        <div class="gallery_img">
+            <?php get_template_part('parts/projets' )?>
+        </div>
+    </div>
+
+    <div>
+
+        
+        <div class="support"> 
+        <?php get_template_part('parts/galerie' )?>
+        </div>
+    </div>
 </div>
 
-<?php include 'footer.php'; ?>
-</div>
+    <footer>
+        <div>
+            <p>
+                <span class="bold">Adresse</span> <br><br>
+
+                21c rue de général de Charle <br>
+                21 000 <br>
+                Dijon
+            </p>
+
+            
+        </div>
+        <p class="link">
+            <a href=""><span>mention légale</span></a>
+            <a href=""><span>instagram</span></a>
+            <a href=""><span>linkedIn</span></a>
+        </p>
+    </footer>
+    
+<?php get_footer(); ?>

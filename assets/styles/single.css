@@ -1,0 +1,18 @@
+.container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 0.5fr 1.5fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "titre titre"
+      "image texte"; 
+    width: 100%; 
+    height: 99.6%; 
+  }
+  .titre { grid-area: titre; }
+  .image { grid-area: image; }
+  .texte { grid-area: texte; }
+
+*{
+    border: brown solid 1px;
+}

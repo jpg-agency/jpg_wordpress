@@ -27,10 +27,11 @@ function register_assets()
         '1.0'
 
     );
-    if (is_front_page()) {
+
+    if (is_single()) {
         wp_enqueue_style( //fonctions pour charger un feuille de style css personalisé sur une page en particulier avec la fonction if(is_front_page)
             'jpg-custom-css',
-            get_template_directory_uri() . '/assets/styles/main.css',
+            get_template_directory_uri() . '/assets/styles/single.css',
             array(),
             '1.0'
         );
@@ -45,7 +46,7 @@ wp_enqueue_script(
 
 wp_enqueue_script(
     'custom-scripts',
-    get_template_directory_uri() . '/scripts/main.js',
+    get_template_directory_uri() . 'assets/scripts/main.js',
     array(),
     '1.0'
 );
@@ -57,38 +58,96 @@ add_action('wp_enqueue_scripts', 'register_assets');
 function custom_logo()
 {
     add_theme_support('custom-logo', array(
-        'height' => 40,
-        'width'  => 40,
+        'height' => 150,
+        'width'  => 150,
     ));
 }
 
 add_action('after_setup_theme', 'custom_logo');
-//Gestion des menus dans weiss-integration
+//Gestion des menus 
 
-register_nav_menus(
+register_nav_menus( array(
+	'main' => 'Menu Principal',
+	'footer' => 'Bas de page',
+) );
 
-    array(
 
 
-        'main' => 'Menu Principal',
-    )
 
-);
 
-/*Navigation Menus*/
-/**
- * Register Custom Navigation Walker
- */
-function register_navwalker()
-{
-    require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+
+
+  
+
+function williams_register_post_types() {
+	// La déclaration de nos Custom Post Types et Taxonomies ira ici
+    // CPT Portfolio
+    $labels = array(
+        'name' => 'Projets',
+        'all_items' => 'Tous les projets',  // affiché dans le sous menu
+        'singular_name' => 'Projet',
+        'add_new_item' => 'Ajouter un projet',
+        'edit_item' => 'Modifier le projet',
+        'menu_name' => 'Projets'
+    );
+
+	$args = array(
+        'labels' => $labels,
+        'public' => true,
+        'show_in_rest' => true,
+        'has_archive' => true,
+        'supports' => array( 'title', 'editor','thumbnail' ),
+        'menu_position' => 5, 
+        'menu_icon' => 'dashicons-admin-customizer',
+	);
+
+	register_post_type( 'Projets', $args );
+
+    /*       ----------------------------------------------------- */
+    $labels = array(
+        'name' => 'Landing',
+        'all_items' => 'Landing',  // affiché dans le sous menu
+        'singular_name' => 'Landing',
+        'add_new_item' => 'Ajouter une landing',
+        'edit_item' => 'Modifier la landing',
+        'menu_name' => 'landing'
+    );
+
+	$args = array(
+        'labels' => $labels,
+        'public' => true,
+        'show_in_rest' => true,
+        'has_archive' => true,
+        'supports' => array( 'title', 'editor','thumbnail' ),
+        'menu_position' => 5, 
+        'menu_icon' => 'dashicons-admin-customizer',
+	);
+
+	register_post_type( 'Landing', $args );
+
+    /*       ----------------------------------------------------- */
+
+    $labels = array(
+        'name' => 'Galerie',
+        'all_items' => 'Galerie',  // affiché dans le sous menu
+        'singular_name' => 'Galerie',
+        'add_new_item' => 'Ajouter une Galerie',
+        'edit_item' => 'Modifier la Galerie',
+        'menu_name' => 'Galerie'
+    );
+
+	$args = array(
+        'labels' => $labels,
+        'public' => true,
+        'show_in_rest' => true,
+        'has_archive' => true,
+        'supports' => array( 'title', 'editor','thumbnail' ),
+        'menu_position' => 5, 
+        'menu_icon' => 'dashicons-admin-customizer',
+	);
+
+	register_post_type( 'Galerie', $args );
+    
 }
-add_action('after_setup_theme', 'register_navwalker');
+add_action( 'init', 'williams_register_post_types' );
 
-/*Navigation Menus*/
-function register_my_menu()
-{
-    register_nav_menu('primary', __('Header Menu'));
-}
-add_action('init', 'register_my_menu');
-  /*End*/

@@ -9,3 +9,171 @@ Version: 1.0
 
 @import url("http://fonts.cdnfonts.com/css/din-pro-cond");
 /*Font*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: "bold";
+    src: url("assets/fonts/Walkway\ Black.ttf");
+}
+@font-face {
+    font-family: "medium";
+    src: url("assets/fonts/Walkway\ SemiBold.ttf");
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+header img{
+    max-width: 6rem;
+}
+body{
+    box-sizing: border-box;
+    max-width: 100%;
+    font-family: "bold";
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+    position: relative;
+}
+.test{
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+    padding: 1.5rem;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.menu_pc{
+    display: flex;
+    flex-direction: row;
+    display: none;
+    column-gap: 2rem;
+    display: none;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+}
+.text__slogan_p{
+    font-size: 2.4rem;
+}
+.text__genese_p{
+    font-size: 1.4rem;
+    font-family: "medium";
+}
+.gallery_img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 3rem;
+    column-gap: 8%;
+}
+h2{
+ margin-bottom: 2rem;
+}
+.support{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    max-width: 51rem;
+    width: auto;
+    text-align: center;
+}
+
+
+@media screen and (min-width: 30rem)
+{
+  
+    body{
+        
+        row-gap: 8rem;
+    }
+    .test{
+        padding: 3rem;
+        row-gap: 8rem;
+    }
+    .menu_pc, h2, .bold{
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (min-width: 70rem)
+{
+    .menu_pc{
+        display: flex;
+    }
+    .menu_mobile{
+        display: none;
+    }
+    .test{
+        padding: 4rem;  
+    }
+    .text{
+        display: flex;
+        margin: auto;
+        width: 70%;
+    }
+    .text__slogan{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .text__slogan_p{
+        font-size: 4rem;
+        max-width: 50rem;
+    }
+    .text__genese{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .text__genese_p{
+        font-size: 1.6rem;
+        max-width: 24rem;
+    }
+}
+
+.gallery_img img{
+    width: 100%;
+    height: auto;
+    max-width: 17rem;
+}
+
+footer{
+    background-color: black;
+    bottom: 0;
+    right: 0;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+
+
+}
+
+footer p{
+    color: white;
+}
+
+.link{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    column-gap: 6rem;
+    justify-content: center;
+}
+
+
+
