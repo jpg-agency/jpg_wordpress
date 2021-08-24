@@ -30,14 +30,7 @@ function register_assets()
         '1.0'
 
     );
-    if (is_front_page()) {
-        wp_enqueue_style( //fonctions pour charger un feuille de style css personalisé sur une page en particulier avec la fonction if(is_front_page)
-            'jpg-custom-css',
-            get_template_directory_uri() . '/assets/styles/front.css',
-            array(),
-            '1.0'
-        );
-    }
+
 
     // Charger le script de Bootstrap
     wp_enqueue_script(
@@ -149,3 +142,34 @@ class bootstrap_5_wp_nav_menu_walker extends Walker_Nav_menu
 }
 // register a new menu
 register_nav_menu('main-menu', 'Main menu');
+
+
+
+
+
+// Déclarer un custom post types
+function alphaweb_register_post_types()
+{
+
+    // CPT adresse
+    $labels = array(
+        'name' => 'adresse',
+        'singular_name' => 'adresse',
+        'add_new_item' => 'Ajouter une adresse',
+        'edit_item' => 'Modifier l\'adresse',
+        'menu_name' => 'adresse'
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'show_in_rest' => true,
+        'has_archive' => true,
+        'supports' => array('title', 'editor'),
+        'menu_position' => 5,
+        'menu_icon'   => 'dashicons-money-alt',
+    );
+
+    register_post_type('adresse', $args);
+}
+add_action('init', 'alphaweb_register_post_types');

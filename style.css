@@ -9,4 +9,25 @@ Requires at least: 4.9.6
 Requires PHP: 5.2.4
 Version: 2.0
 License: GNU General Public License v2 or later
+*/
+footer {
+  background-color: black;
+  bottom: 0;
+  right: 0;
+  padding: 3rem;
+  /*   display: flex;
+  flex-direction: column;
+  row-gap: 3rem; */
+}
 
+footer p {
+  color: white;
+}
+
+.link {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  column-gap: 6rem;
+  justify-content: center;
+}
