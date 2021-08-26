@@ -4,14 +4,14 @@
 
         <div class="row">
             <div class="col-sm-12 col-md-4">
-                <?php $loop = new WP_Query((array('post_type' => 'adresse', 'order' => 'ASC', 'posts_per_page' => 1))); ?>
-                <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-                    <div class=banner_contact_text'>
-                        <h5><?php the_title() ?></h5><br>
-                        <?php the_content() ?>
-                    </div>
-                <?php endwhile;
-                wp_reset_query(); ?>
+                <<<<<<< HEAD=======<?php $loop = new WP_Query((array('post_type' => 'adresse', 'order' => 'DSC', 'posts_per_page' => 1))); ?>>>>>>>> williams
+                    <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+                        <div class=banner_contact_text'>
+                            <h5><?php the_title() ?></h5><br>
+                            <?php the_content() ?>
+                        </div>
+                    <?php endwhile;
+                    wp_reset_query(); ?>
             </div>
             <div class="col-sm-0 col-md-4">
 

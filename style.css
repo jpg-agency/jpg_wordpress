@@ -10,6 +10,7 @@ Requires PHP: 5.2.4
 Version: 2.0
 License: GNU General Public License v2 or later
 */
+<<<<<<< HEAD
 footer {
   background-color: black;
   bottom: 0;
@@ -30,4 +31,13 @@ footer p {
   flex-direction: row;
   column-gap: 6rem;
   justify-content: center;
+=======
+@font-face {
+    font-family: "bold";
+    src: url("assets/fonts/Walkway\ Black.ttf");
+}
+@font-face {
+    font-family: "medium";
+    src: url("assets/fonts/Walkway\ SemiBold.ttf");
+>>>>>>> williams
 }

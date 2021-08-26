@@ -7,15 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content=<?php bloginfo('description'); ?>>
     <title><?php bloginfo('name'); ?></title>
-    <link rel="stylesheet" href="<?php get_stylesheet_uri(); ?>">
+
     <?php wp_head(); ?>
 
-</head>
-
-<body>
+</div>
     <?php wp_body_open(); ?>
 
     <nav class="navbar navbar-expand-md navbar-light bg-light">
+<<<<<<< HEAD
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,6 +22,17 @@
             </button>
 
             <div class="collapse navbar-collapse" id="main-menu">
+=======
+        <div class="container-fluid ">
+            <a class="navbar-brand" href="<?php echo home_url( '/' ); ?>">
+    <?= get_custom_logo($blog_id)?>
+  </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse d-flex justify-content-endt" id="main-menu">
+>>>>>>> williams
                 <?php
                 wp_nav_menu(array(
                     'theme_location' => 'main-menu',
@@ -36,4 +46,4 @@
                 ?>
             </div>
         </div>
-    </nav>
+    </nav> 
