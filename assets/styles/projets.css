@@ -10,10 +10,11 @@
     height: 99.6%; 
   }
   .titre { grid-area: titre; }
-  .image { grid-area: image; }
+  .image { grid-area: image;
+  height: 150px;
+    width: 150px;
+}
   .texte { grid-area: texte; }
 
-body{
-    border: brown solid 1px!important;
-    background-color: blue!important;
-}
+
+

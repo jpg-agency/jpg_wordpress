@@ -37,3 +37,6 @@
             </div>
         </div>
     </nav> 
+    <div class="text">
+        <?php get_template_part ('parts/title' )?>
+    </div>

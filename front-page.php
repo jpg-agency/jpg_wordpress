@@ -1,9 +1,7 @@
 <?php get_header(); ?>
 
 
-    <div class="text">
-        <?php get_template_part ('parts/title' )?>
-    </div>
+
 
     <div>
         <h2><?php /* get_template_part('home' ) */?></h2>
