@@ -13,6 +13,7 @@
   .image { grid-area: image; }
   .texte { grid-area: texte; }
 
-*{
-    border: brown solid 1px;
+body{
+    border: brown solid 1px!important;
+    background-color: blue!important;
 }
