@@ -22,23 +22,6 @@
     </div>
 </div>
 
-    <footer>
-        <div>
-            <p>
-                <span class="bold">Adresse</span> <br><br>
-
-                21c rue de général de Charle <br>
-                21 000 <br>
-                Dijon
-            </p>
-
-            
-        </div>
-        <p class="link">
-            <a href=""><span>mention légale</span></a>
-            <a href=""><span>instagram</span></a>
-            <a href=""><span>linkedIn</span></a>
-        </p>
-    </footer>
+    
     
 <?php get_footer(); ?>

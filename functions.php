@@ -79,7 +79,7 @@ register_nav_menus( array(
 
   
 
-function williams_register_post_types() {
+function JPG_register_post_types() {
 	// La déclaration de nos Custom Post Types et Taxonomies ira ici
     // CPT Portfolio
     $labels = array(
@@ -147,7 +147,28 @@ function williams_register_post_types() {
 	);
 
 	register_post_type( 'Galerie', $args );
-    
+
+    /*       ----------------------------------------------------- */
+     // CPT adresse
+     $labels = array(
+        'name' => 'adresse',
+        'singular_name' => 'adresse',
+        'add_new_item' => 'Ajouter une adresse',
+        'edit_item' => 'Modifier l\'adresse',
+        'menu_name' => 'adresse'
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'show_in_rest' => true,
+        'has_archive' => true,
+        'supports' => array('title', 'editor'),
+        'menu_position' => 5,
+        'menu_icon'   => 'dashicons-money-alt',
+    );
+
+    register_post_type('adresse', $args);
 }
 
 // bootstrap 5 wp_nav_menu walker
@@ -233,31 +254,7 @@ register_nav_menu('main-menu', 'Main menu');
 
 
 
-// Déclarer un custom post types
-function alphaweb_register_post_types()
-{
 
-    // CPT adresse
-    $labels = array(
-        'name' => 'adresse',
-        'singular_name' => 'adresse',
-        'add_new_item' => 'Ajouter une adresse',
-        'edit_item' => 'Modifier l\'adresse',
-        'menu_name' => 'adresse'
-    );
 
-    $args = array(
-        'labels' => $labels,
-        'public' => true,
-        'show_in_rest' => true,
-        'has_archive' => true,
-        'supports' => array('title', 'editor'),
-        'menu_position' => 5,
-        'menu_icon'   => 'dashicons-money-alt',
-    );
-
-    register_post_type('adresse', $args);
-}
-
-add_action( 'init', 'williams_register_post_types' );
+add_action( 'init', 'JPG_register_post_types' );
 
