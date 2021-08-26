@@ -31,7 +31,7 @@ function register_assets()
     if (is_single()) {
         wp_enqueue_style( //fonctions pour charger un feuille de style css personalisé sur une page en particulier avec la fonction if(is_front_page)
             'jpg-custom-css',
-            get_template_directory_uri() . '/assets/styles/single.css',
+            get_template_directory_uri() . '/assets/styles/projets.css',
             array(),
             '1.0'
         );
