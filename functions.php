@@ -28,7 +28,7 @@ function register_assets()
 
     );
 
-    if (is_single()) {
+    if (is_page_template()) {
         wp_enqueue_style( //fonctions pour charger un feuille de style css personalisé sur une page en particulier avec la fonction if(is_front_page)
             'jpg-custom-css',
             get_template_directory_uri() . '/assets/styles/projets.css',

@@ -10,27 +10,30 @@
 
     <?php wp_head(); ?>
 
-</head>
-
-<body>
-<body <?php body_class( 'site' ); ?>>
-<div class="test">
-<header class="menu_pc">
-  <a href="<?php echo home_url( '/' ); ?>">
-    <?= get_custom_logo($blog_id)?>
-  </a>
-
-  <?php 
-	wp_nav_menu( 
-        array( 
-            'theme_location' => 'main', 
-            'container' => 'ul', // afin d'éviter d'avoir une div autour 
-            'menu_class' => 'menu_pc', // ma classe personnalisée 
-        ) 
-    ); 
-?>
-</header>
 </div>
     <?php wp_body_open(); ?>
 
- 
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container-fluid ">
+            <a class="navbar-brand" href="<?php echo home_url( '/' ); ?>">
+    <?= get_custom_logo($blog_id)?>
+  </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse d-flex justify-content-endt" id="main-menu">
+                <?php
+                wp_nav_menu(array(
+                    'theme_location' => 'main-menu',
+                    'container' => false,
+                    'menu_class' => '',
+                    'fallback_cb' => '__return_false',
+                    'items_wrap' => '<ul id="%1$s" class="navbar-nav me-auto mb-2 mb-md-0 %2$s">%3$s</ul>',
+                    'depth' => 2,
+                    'walker' => new bootstrap_5_wp_nav_menu_walker()
+                ));
+                ?>
+            </div>
+        </div>
+    </nav> 
