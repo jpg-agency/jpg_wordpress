@@ -13,7 +13,7 @@
 </div>
     <?php wp_body_open(); ?>
 
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <nav class="navbar navbar-expand-md navbar-light bg-light" >
         <div class="container-fluid ">
             <a class="navbar-brand" href="<?php echo home_url( '/' ); ?>">
     <?= get_custom_logo($blog_id)?>
