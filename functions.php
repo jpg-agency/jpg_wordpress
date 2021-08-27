@@ -57,8 +57,9 @@ wp_enqueue_script(
 wp_enqueue_script(
     'jpg',
     get_template_directory_uri() . '/assets/scripts/main.js',
-    array(),
-    '1.0'
+    array('wordpress'),
+    '1.0',
+    true
 );
 }
 
@@ -69,8 +70,8 @@ add_action('wp_enqueue_scripts', 'register_assets');
 function custom_logo()
 {
     add_theme_support('custom-logo', array(
-        'height' => 150,
-        'width'  => 150,
+        'height' => 100,
+        'width'  => 100,
     ));
 }
 

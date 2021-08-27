@@ -12,9 +12,8 @@
 
 </div>
     <?php wp_body_open(); ?>
-    <?php get_template_part ('/parts/custom_navbar' )?>
+    <?php get_template_part ('parts/custom_navbar' )?>
 
     <div class="text">
         <?php get_template_part ('parts/title' )?>
     </div>
-    

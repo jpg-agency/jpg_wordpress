@@ -1,6 +1,9 @@
 <div id="container">
     <nav class="navbar" id='navbar'>
-        <div class="navbar__title"></div>
+        <div class="navbar__title">
+        <a class="navbar-brand" href="<?php echo home_url( '/' ); ?>">
+    <?= get_custom_logo($blog_id)?>
+        </div>
         <a  class="toggle-button" id="toggle__button">
             
             <span class="bar"></span>
