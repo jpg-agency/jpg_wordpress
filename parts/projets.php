@@ -1,8 +1,6 @@
 <div class="row">
 <h1>Projets</h1></div>
 
-
-
 <?php $loop = new WP_Query((array('post_type' => 'Projets','order'=>'ASC'))); ?>
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
