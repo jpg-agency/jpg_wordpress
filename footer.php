@@ -34,7 +34,7 @@
         </div>
     </div>
     <p class="link ">
-        <a href=""><span>mention légale</span></a>
+        <a href="http://le-temps-d-un-voyage.test/mentions-legales/"><span>mention légale</span></a>
         <a href=""><span>instagram</span></a>
         <a href=""><span>linkedIn</span></a>
     </p>
